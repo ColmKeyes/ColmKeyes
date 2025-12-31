@@ -1,0 +1,92 @@
+<svg viewBox="0 0 400 200" width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7ee787;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#7ee787;stop-opacity:0.2"/>
+    </linearGradient>
+    <linearGradient id="return-grad" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:0.2"/>
+    </linearGradient>
+    <pattern id="grid-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#21262d" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  
+  <rect width="400" height="200" fill="#0d1117"/>
+  <rect width="400" height="200" fill="url(#grid-pattern)" opacity="0.5"/>
+  
+  <!-- Satellite -->
+  <rect x="25" y="40" width="45" height="35" rx="4" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <rect x="8" y="48" width="20" height="18" fill="#1a3a5c" stroke="#58a6ff" stroke-width="1"/>
+  <line x1="12" y1="48" x2="12" y2="66" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+  <line x1="18" y1="48" x2="18" y2="66" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+  <line x1="24" y1="48" x2="24" y2="66" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+  <rect x="67" y="48" width="20" height="18" fill="#1a3a5c" stroke="#58a6ff" stroke-width="1"/>
+  <line x1="71" y1="48" x2="71" y2="66" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+  <line x1="77" y1="48" x2="77" y2="66" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+  <line x1="83" y1="48" x2="83" y2="66" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
+  <rect x="35" y="28" width="25" height="14" rx="2" fill="#30363d" stroke="#58a6ff" stroke-width="1"/>
+  <circle cx="47" cy="57" r="5" fill="#7ee787">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="47" y="95" text-anchor="middle" fill="#58a6ff" font-family="monospace" font-size="9">SAR</text>
+  
+  <!-- Circular polarized wave hitting forest -->
+  <path d="M90,55 Q110,45 130,60 Q150,75 170,85 Q190,95 210,110 Q230,125 250,135 Q270,145 285,150" 
+        fill="none" stroke="#7ee787" stroke-width="2" opacity="0.8">
+    <animate attributeName="stroke-dasharray" values="0,350;220,130" dur="2.2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M90,65 Q110,55 130,70 Q150,85 170,95 Q190,105 210,120 Q230,135 250,145 Q270,155 285,160" 
+        fill="none" stroke="#58a6ff" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="stroke-dasharray" values="0,350;220,130" dur="2.2s" begin="0.1s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Polarization indicators -->
+  <ellipse cx="140" cy="72" rx="5" ry="9" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4" transform="rotate(35 140 72)">
+    <animate attributeName="opacity" values="0.5;0.15;0.5" dur="1s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="190" cy="100" rx="5" ry="9" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4" transform="rotate(40 190 100)">
+    <animate attributeName="opacity" values="0.5;0.15;0.5" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="240" cy="130" rx="5" ry="9" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4" transform="rotate(45 240 130)">
+    <animate attributeName="opacity" values="0.5;0.15;0.5" dur="1s" begin="0.6s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <text x="130" y="38" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="7">VV + VH</text>
+  
+  <!-- Forest canopy -->
+  <line x1="250" y1="180" x2="385" y2="180" stroke="#30363d" stroke-width="1"/>
+  <path d="M275,180 L275,145 M262,153 Q275,130 288,153 M255,167 Q275,135 295,167" 
+        fill="none" stroke="#238636" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M315,180 L315,135 M299,145 Q315,117 331,145 M290,163 Q315,123 340,163" 
+        fill="none" stroke="#2ea043" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M355,180 L355,150 M345,157 Q355,143 365,157 M340,170 Q355,147 370,170" 
+        fill="none" stroke="#238636" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M295,180 L295,160 M287,165 Q295,155 303,165" 
+        fill="none" stroke="#196c2e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M335,180 L335,163 M329,167 Q335,160 341,167" 
+        fill="none" stroke="#196c2e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Canopy interaction -->
+  <circle cx="300" cy="145" r="18" fill="none" stroke="#7ee787" stroke-width="1" stroke-dasharray="4,3" opacity="0.5">
+    <animate attributeName="r" values="15;22;15" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Return backscatter -->
+  <path d="M290,145 Q220,100 95,58" fill="none" stroke="#58a6ff" stroke-width="1.5" opacity="0.7">
+    <animate attributeName="stroke-dasharray" values="0,280;220,60" dur="2.5s" begin="1.1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M310,140 Q230,95 95,52" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.5">
+    <animate attributeName="stroke-dasharray" values="0,280;220,60" dur="2.5s" begin="1.3s" repeatCount="indefinite"/>
+  </path>
+  
+  <text x="315" y="195" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="8">forest canopy</text>
+  
+  <!-- Info box -->
+  <rect x="10" y="130" width="75" height="55" rx="3" fill="#161b22" stroke="#30363d" opacity="0.9"/>
+  <text x="47" y="145" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="6">INTERFEROMETRY</text>
+  <text x="47" y="160" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="7">γ coherence</text>
+  <text x="47" y="175" text-anchor="middle" fill="#58a6ff" font-family="monospace" font-size="7">Δφ phase</text>
+</svg>

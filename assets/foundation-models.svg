@@ -1,0 +1,88 @@
+<svg viewBox="0 0 420 200" width="420" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="200" fill="#0d1117"/>
+  
+  <!-- Source imagery -->
+  <rect x="15" y="30" width="120" height="120" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="16" y="31" width="59" height="59" fill="#238636" opacity="0.65"/>
+  <rect x="76" y="31" width="58" height="59" fill="#2ea043" opacity="0.75"/>
+  <rect x="16" y="91" width="59" height="58" fill="#2ea043" opacity="0.55"/>
+  <rect x="76" y="91" width="58" height="58" fill="#7c4a1a" opacity="0.45"/>
+  
+  <!-- Canopy texture -->
+  <circle cx="35" cy="50" r="15" fill="#2ea043" opacity="0.4"/>
+  <circle cx="55" cy="65" r="10" fill="#238636" opacity="0.35"/>
+  <circle cx="100" cy="48" r="18" fill="#238636" opacity="0.5"/>
+  <circle cx="115" cy="70" r="12" fill="#2ea043" opacity="0.35"/>
+  <circle cx="35" cy="105" r="16" fill="#238636" opacity="0.45"/>
+  <circle cx="60" cy="120" r="12" fill="#2ea043" opacity="0.35"/>
+  <rect x="80" y="95" width="50" height="50" fill="#5c3d1a" opacity="0.25"/>
+  
+  <!-- Grid -->
+  <line x1="75" y1="30" x2="75" y2="150" stroke="#30363d" stroke-width="1"/>
+  <line x1="15" y1="90" x2="135" y2="90" stroke="#30363d" stroke-width="1"/>
+  
+  <!-- Scanning highlight -->
+  <rect x="15" y="30" width="60" height="60" fill="none" stroke="#7ee787" stroke-width="2.5">
+    <animate attributeName="x" values="15;75;75;15;15" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="30;30;90;90;30" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <text x="75" y="165" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="8">satellite imagery</text>
+  
+  <!-- Arrow -->
+  <path d="M145,90 L175,90" stroke="#58a6ff" stroke-width="2"/>
+  <path d="M170,85 L180,90 L170,95" fill="none" stroke="#58a6ff" stroke-width="2"/>
+  <text x="162" y="80" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="6">tokenize</text>
+  
+  <!-- Token sequence -->
+  <rect x="190" y="25" width="100" height="130" rx="4" fill="#161b22" stroke="#30363d"/>
+  <text x="240" y="18" text-anchor="middle" fill="#a371f7" font-family="monospace" font-size="7">PATCH TOKENS</text>
+  
+  <!-- Tokens -->
+  <rect x="200" y="35" width="35" height="25" rx="3" fill="#238636" opacity="0.5" stroke="#7ee787" stroke-width="1.5">
+    <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="217" y="51" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="7">t₁</text>
+  <text x="217" y="72" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="5">dense</text>
+  
+  <rect x="245" y="35" width="35" height="25" rx="3" fill="#2ea043" opacity="0.5" stroke="#7ee787" stroke-width="1.5">
+    <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="5s" begin="1.25s" repeatCount="indefinite"/>
+  </rect>
+  <text x="262" y="51" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="7">t₂</text>
+  <text x="262" y="72" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="5">healthy</text>
+  
+  <rect x="200" y="82" width="35" height="25" rx="3" fill="#2ea043" opacity="0.4" stroke="#7ee787" stroke-width="1.5">
+    <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="217" y="98" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="7">t₃</text>
+  <text x="217" y="119" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="5">mixed</text>
+  
+  <rect x="245" y="82" width="35" height="25" rx="3" fill="#f0883e" opacity="0.4" stroke="#f0883e" stroke-width="1.5">
+    <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="5s" begin="3.75s" repeatCount="indefinite"/>
+  </rect>
+  <text x="262" y="98" text-anchor="middle" fill="#f0883e" font-family="monospace" font-size="7">t₄</text>
+  <text x="262" y="119" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="5">disturbed</text>
+  
+  <!-- Positional encoding -->
+  <rect x="200" y="130" width="80" height="16" rx="2" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
+  <text x="240" y="141" text-anchor="middle" fill="#58a6ff" font-family="monospace" font-size="6">+ pos encoding</text>
+  
+  <!-- Arrow to embedding -->
+  <path d="M300,90 L325,90" stroke="#a371f7" stroke-width="2"/>
+  <path d="M320,85 L330,90 L320,95" fill="none" stroke="#a371f7" stroke-width="2"/>
+  
+  <!-- Embedding output -->
+  <rect x="340" y="35" width="65" height="110" rx="4" fill="#161b22" stroke="#a371f7" stroke-width="1.5"/>
+  <text x="372" y="28" text-anchor="middle" fill="#a371f7" font-family="monospace" font-size="7">EMBEDDING</text>
+  
+  <rect x="350" y="45" width="45" height="8" rx="2" fill="#7ee787" opacity="0.6"/>
+  <rect x="350" y="57" width="35" height="8" rx="2" fill="#58a6ff" opacity="0.5"/>
+  <rect x="350" y="69" width="42" height="8" rx="2" fill="#a371f7" opacity="0.5"/>
+  <rect x="350" y="81" width="28" height="8" rx="2" fill="#f0883e" opacity="0.4"/>
+  <rect x="350" y="93" width="38" height="8" rx="2" fill="#7ee787" opacity="0.4"/>
+  <rect x="350" y="105" width="32" height="8" rx="2" fill="#58a6ff" opacity="0.35"/>
+  
+  <text x="372" y="128" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="6">768-dim</text>
+  
+  <text x="210" y="185" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="7">imagery → tokens → embeddings → downstream tasks</text>
+</svg>
